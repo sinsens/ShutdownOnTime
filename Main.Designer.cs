@@ -39,6 +39,8 @@
             this.btnAbort = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -128,6 +130,25 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(109, 21);
             this.dateTimePicker1.TabIndex = 7;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(245, 197);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 12);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "作者：@Sinsen";
+            // 
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(247, 221);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "关闭";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -136,11 +157,13 @@
             this.ClientSize = new System.Drawing.Size(353, 260);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAbort);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbTip);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -166,6 +189,8 @@
         private System.Windows.Forms.Button btnAbort;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

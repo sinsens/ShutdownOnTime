@@ -94,5 +94,10 @@ namespace ShutdownOnTime
             textBox1.Text = DateTime.Now.ToLongTimeString();
             lbTip.Text = "剩余时间：";
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
