@@ -52,7 +52,7 @@ namespace ShutdownOnTime
                 long elapsedTicks = centuryBegin.Ticks - currentDate.Ticks;
                 elapsedSpan = new TimeSpan(elapsedTicks);
 
-                if (elapsedSpan.Seconds < 1)
+                if (elapsedSpan.Seconds < 0)
                 {
                     System.Diagnostics.Process bootProcess = new System.Diagnostics.Process();
                     bootProcess.StartInfo.FileName = "shutdown";
