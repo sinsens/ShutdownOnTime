@@ -41,6 +41,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.btnShutdown = new System.Windows.Forms.Button();
+            this.btnReboot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -149,6 +151,26 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // btnShutdown
+            // 
+            this.btnShutdown.Location = new System.Drawing.Point(27, 192);
+            this.btnShutdown.Name = "btnShutdown";
+            this.btnShutdown.Size = new System.Drawing.Size(75, 23);
+            this.btnShutdown.TabIndex = 4;
+            this.btnShutdown.Text = "关机";
+            this.btnShutdown.UseVisualStyleBackColor = true;
+            this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
+            // 
+            // btnReboot
+            // 
+            this.btnReboot.Location = new System.Drawing.Point(27, 221);
+            this.btnReboot.Name = "btnReboot";
+            this.btnReboot.Size = new System.Drawing.Size(75, 23);
+            this.btnReboot.TabIndex = 4;
+            this.btnReboot.Text = "重启";
+            this.btnReboot.UseVisualStyleBackColor = true;
+            this.btnReboot.Click += new System.EventHandler(this.btnReboot_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -159,6 +181,8 @@
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnAbort);
+            this.Controls.Add(this.btnReboot);
+            this.Controls.Add(this.btnShutdown);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.textBox1);
@@ -191,6 +215,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnShutdown;
+        private System.Windows.Forms.Button btnReboot;
     }
 }
 

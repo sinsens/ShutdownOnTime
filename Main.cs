@@ -55,18 +55,15 @@ namespace ShutdownOnTime
                 if (elapsedSpan.Seconds < 0)
                 {
                     is_start = false;
-                    System.Diagnostics.Process bootProcess = new System.Diagnostics.Process();
-                    bootProcess.StartInfo.FileName = "shutdown";
-                    bootProcess.StartInfo.Arguments = "/s";
                     if (checkBox1.Checked)
                     {
-                        bootProcess.StartInfo.Arguments = " /p /f";
+                        ShutDown(" /p /f");
                         lbTip.Text = "时间到，系统将立即关机";
                     }
                     else {
                         lbTip.Text = "时间到，系统将会在1分内后关机";
+                        ShutDown("/s");
                     }
-                    bootProcess.Start();
                 }
                 else {
                     lbTip.Text = "剩余时间："+elapsedSpan.Days+"天" + elapsedSpan.Hours + "小时" + elapsedSpan.Minutes + "分" + elapsedSpan.Seconds + "秒";
@@ -84,12 +81,16 @@ namespace ShutdownOnTime
             init();
         }
 
-        private void btnAbort_Click(object sender, EventArgs e)
-        {
+        private void ShutDown(string param="/s") {
             System.Diagnostics.Process bootProcess = new System.Diagnostics.Process();
             bootProcess.StartInfo.FileName = "shutdown";
-            bootProcess.StartInfo.Arguments = "/a";
+            bootProcess.StartInfo.Arguments = param;
             bootProcess.Start();
+        }
+
+        private void btnAbort_Click(object sender, EventArgs e)
+        {
+            ShutDown("/a");
             init();
             MessageBox.Show("已终止关机");
         }
@@ -102,6 +103,16 @@ namespace ShutdownOnTime
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnShutdown_Click(object sender, EventArgs e)
+        {
+            ShutDown();
+        }
+
+        private void btnReboot_Click(object sender, EventArgs e)
+        {
+            ShutDown("/r");
         }
     }
 }
